@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -29,7 +28,6 @@
 <div class="step" id="secondStep"><br>
 <p>Choose a method to generate cancellable code</p>
 <button onclick=bin()>BIN COMBO</button>
-<button onclick=hash()>Bio-Hashing</button>
 <div class="step" id="randomCodes">
 <p>
 <label for "randomCode">Random code generated from your random number
@@ -43,12 +41,9 @@
 </div>
 
 <div class="step" id="thirdStep"><br>
-<p>Calculate the Hamming distance between original code and new code</p>
-<p>Hamming distance below threshold will be considered as same user to authenticate himself/herself. To evaluate the effectiveness of the transformation method whether it can diversify the original code, Hamming distance should be greater than threshold</p>
+<p>Calculate the Hamming distance (byte difference) between original code and new code</p>
 <p>The byte number of the codes is: </p><p id="codeLength"></p>
-<p>Threshold value should not be negative or greater than the byte number</p>
-<input type="number" id="threshold"> Set the threshold</input>
-<button onclick="hammingDistance()">Calculate</button>
+<p id='threshold'></p><button onclick="hammingDistance()">Calculate</button>
 </div>
 
 </body>
