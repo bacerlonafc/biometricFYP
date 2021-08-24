@@ -22,10 +22,10 @@ var binMethod = confirm("BIN COMBO performs XOR operation between the original c
 
 if(binMethod == true){
 var random = prompt("Please enter a random number to generate the random code");
-if(Number.isInteger(parseInt(random)) == false){
-alert("Accept integer only, not included decimal number, symbol and alphabet");
+if(Number.isInteger(parseInt(random)) == false || parseInt(random)<0){
+alert("Accept positive integer only, not included decimal number, symbol, alphabet and negative number");
 }
-
+else{
 var originalFile = document.getElementById('fileContent').textContent;
 var length = originalFile.length;
 const codes = [];
@@ -54,7 +54,7 @@ document.getElementById('transform').style.background = 'brown';
 document.getElementById('codeLength').innerHTML = codes.length;
 }
 }
-
+}
 
 
 function hash(){
@@ -87,7 +87,7 @@ difference+=1;
 }
 }
 }
-alert('The Hamming distance is '+difference);
+alert('There are '+difference+ ' bytes different within two codes');
 }
 
 
